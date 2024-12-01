@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple AR Project</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Marker -->
+      <a-marker preset="custom" type="pattern" url="marker.patt">
+        <!-- 3D Object (a rotating cube) -->
+        <a-box position="0 0.5 0" material="color: blue;" 
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
+        </a-box>
+      </a-marker>
+      
+      <!-- Camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
